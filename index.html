@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b0624">
+<title>Love Lock 🔒 · Locked forever. No key. No exit.</title>
+<meta name="description" content="Engrave your love on a golden padlock, lock it on the bridge and throw the key in the river. Made by @hack.n.code">
+<meta property="og:title" content="Love Lock 🔒 · Locked forever. No key. No exit.">
+<meta property="og:description" content="Lock your love on the bridge and throw away the key 🔐❤️">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<div id="topbar">
+  <div class="brand">Love Lock <span>🔒</span></div>
+  <button id="music" class="round" aria-label="Music on/off" title="Music">🔇</button>
+</div>
+
+<!-- 1. intro splash -->
+<section id="intro" class="screen show">
+  <div class="introbox">
+    <div class="biglock">🔒</div>
+    <h1>Love Lock</h1>
+    <p class="tag">A bridge. A lock. A promise.<br><b>Forever.</b></p>
+    <button id="begin" class="btn gold">Begin 💞</button>
+    <button id="wall1" class="link">🧱 See the lock wall</button>
+  </div>
+</section>
+
+<!-- 2. name -->
+<section id="namescr" class="screen">
+  <div class="card namecard">
+    <h2>Whose heart are you locking with yours?</h2>
+    <label for="nm" class="sr">Pet name</label>
+    <input id="nm" type="text" maxlength="16" autocomplete="off" spellcheck="false" placeholder="Their pet name… e.g. Jaan">
+    <div class="chips" id="chips"></div>
+    <button id="lockbtn" class="btn gold">Lock our love 🔒</button>
+  </div>
+</section>
+
+<!-- 3. lock / key hints -->
+<div id="hint" class="hint"></div>
+
+<!-- 4. final -->
+<section id="final" class="screen">
+  <h2 id="ftitle">Locked forever.<br>No key. No exit. 🔐❤️</h2>
+  <div id="fpanel" class="card">
+    <div class="row meterrow">
+      <span class="lbl">Love meter</span>
+      <div class="meter"><i id="mfill"></i></div>
+      <b id="mval">0%</b>
+    </div>
+    <div class="row counter">⏳ Locked for <b id="cnt">0d 00:00:00</b></div>
+    <ol id="promises"></ol>
+    <div class="grid">
+      <button id="cardbtn" class="btn small">📥 Lock card</button>
+      <button id="share" class="btn small wa">💬 WhatsApp</button>
+      <button id="wall2" class="btn small">🧱 Lock wall</button>
+      <button id="replay" class="btn small">↺ Replay</button>
+    </div>
+  </div>
+</section>
+
+<!-- lock wall -->
+<section id="wall" class="modal" aria-hidden="true">
+  <div class="mbox wallbox">
+    <div class="mhead"><h3>The Lock Wall 💞</h3><button id="wclose" class="round" aria-label="Close">✕</button></div>
+    <p class="wsub"><b id="wcount">2,814</b> locks hang on this bridge</p>
+    <div id="wgrid" class="wgrid"></div>
+  </div>
+</section>
+
+<!-- card modal -->
+<section id="cardm" class="modal" aria-hidden="true">
+  <div class="mbox cardbox">
+    <div class="mhead"><h3>Your lock card 💌</h3><button id="cclose" class="round" aria-label="Close">✕</button></div>
+    <img id="cardimg" alt="Love lock card">
+    <button id="dl" class="btn gold">Download PNG ⬇️</button>
+  </div>
+</section>
+
+<div id="ghost" aria-hidden="true"></div>
+<footer>Made by <a href="https://www.instagram.com/hack.n.code/" target="_blank" rel="noopener">@hack.n.code</a></footer>
+<script src="app.js"></script>
+</body>
+</html>
